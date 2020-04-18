@@ -80,6 +80,9 @@ function DropdownMenu() {
           <DropdownItem leftIcon={<CogIcon />} gotoMenu='settings'>
             Settings
           </DropdownItem>
+          <DropdownItem leftIcon={'🦧'} gotoMenu='animals'>
+            Animals
+          </DropdownItem>
         </div>
       </CSSTransition>
       <CSSTransition
@@ -90,19 +93,30 @@ function DropdownMenu() {
         onEnter={calcHeight}
       >
         <div className='menu'>
+          <DropdownItem leftIcon={<ArrowIcon />} gotoMenu='main'>
+            <h2>My Tutorial</h2>
+          </DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}>HTML</DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}>CSS</DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}>JavaScript</DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}>React</DropdownItem>
+        </div>
+      </CSSTransition>
+      <CSSTransition
+        in={activeMenu === 'animals'}
+        timeout={500}
+        unmountOnExit
+        classNames='menu-secondary'
+        onEnter={calcHeight}
+      >
+        <div className='menu'>
           <DropdownItem leftIcon={<ArrowIcon />} gotoMenu='main'></DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
+          <DropdownItem leftIcon={'🐴'}>Horse</DropdownItem>
+          <DropdownItem leftIcon={'🐒'}>Monkey</DropdownItem>
+          <DropdownItem leftIcon={'🦥'}>Sloth</DropdownItem>
+          <DropdownItem leftIcon={'🦔'}>Hedgehog</DropdownItem>
+          <DropdownItem leftIcon={'🐥'}>Duck</DropdownItem>
+          <DropdownItem leftIcon={'🦚'}>Peacock</DropdownItem>
         </div>
       </CSSTransition>
     </div>

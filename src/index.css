@@ -11,6 +11,7 @@
 
 body {
   margin: 0;
+  background: #151616;
 }
 
 ul {
@@ -63,6 +64,10 @@ a {
 
 .icon-button:hover {
   filter: brightness(1.2);
+}
+
+.menu-item .icon-left {
+  margin-right: 0.5rem;
 }
 
 .icon-button svg,
