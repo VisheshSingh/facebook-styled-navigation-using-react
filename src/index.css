@@ -6,6 +6,7 @@
   --border: 1px solid #474a4d;
   --border-radius: 8px;
   --speed: 500ms;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -44,7 +45,9 @@ a {
   width: calc(var(--nav-size) * 0.8);
 }
 
-.icon-button {
+.icon-button,
+.icon-left,
+.icon-right {
   --button-size: calc(var(--nav-size) * 0.5);
   height: var(--button-size);
   width: var(--button-size);
@@ -62,8 +65,38 @@ a {
   filter: brightness(1.2);
 }
 
-.icon-button svg {
+.icon-button svg,
+.menu-item svg {
   width: 20px;
   height: 20px;
   fill: var(--text-color);
+}
+
+.dropdown {
+  position: absolute;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  transition: background var(--speed);
+}
+
+.menu-item:hover {
+  background-color: #525357;
+}
+
+.icon-right {
+  margin-left: auto;
 }
