@@ -77,11 +77,7 @@ function DropdownMenu() {
       >
         <div className='menu'>
           <DropdownItem leftIcon={<BoltIcon />}>My Profile</DropdownItem>
-          <DropdownItem
-            leftIcon={<CogIcon />}
-            rightIcon={<ChevronIcon />}
-            gotoMenu='settings'
-          >
+          <DropdownItem leftIcon={<CogIcon />} gotoMenu='settings'>
             Settings
           </DropdownItem>
         </div>
@@ -91,6 +87,7 @@ function DropdownMenu() {
         timeout={500}
         unmountOnExit
         classNames='menu-secondary'
+        onEnter={calcHeight}
       >
         <div className='menu'>
           <DropdownItem leftIcon={<ArrowIcon />} gotoMenu='main'></DropdownItem>
